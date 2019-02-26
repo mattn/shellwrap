@@ -22,15 +22,16 @@ func main() {
 		fmt.Fprintln(os.Stderr, err)
 		os.Exit(1)
 	}
-	if len(args) <= 1 {
-		os.Exit(1)
-	}
 	args = args[1:]
 
 	useshell := false
 	if len(args) > 0 && args[0] == "-s" {
 		useshell = true
 		args = args[1:]
+	}
+
+	if len(args) == 0 {
+		os.Exit(1)
 	}
 
 	var cmdargs []string
