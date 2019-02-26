@@ -19,6 +19,8 @@ C:\>shellwrap notepad $(ver).txt
 $ go get github.com/mattn/shellwrap
 ```
 
+If you want to run the process with shell (i.e. cmd.exe), use `-s` flag.
+
 ## License
 
 MIT
